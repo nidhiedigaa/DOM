@@ -1,0 +1,59 @@
+DOM stands for document object model, it treats the html document as a tree of nodes and treats html elements as objects
+DOM gives javascript power to manipulate the html elements and design the webpage
+changes done to html elements through DOM will not be visible on our html document it will directly impact our webpage and we can see it in webpage
+
+methods to access html elements in javascript:
+1.getElementById('id name')=> it will return the html element that matches with specified Id name
+2.getElementsByClassName('class name')=>it will return the array of html elements that matches with the specified class name
+3.getElementsByTagName('tagname')=> it will return the array of html elements that matches with the specified tag name
+4.querySelector('css selector')=> hre inside paranthesis we need to specify css selector just how we specify in internal or external css, it will
+return the first html element that matches the selector we have passed
+5.querySelectorAll('css selector')=>it will return the array of html elements that matches with the specified css selector
+
+adding style to html element:
+style.propertyName='property value' => property name should be in lower camel case, and it will apply inline css to html element
+it is limited to a single html element, if we need to apply multiple times we need to make use of it that many times
+
+creating html elements through DOM:
+createElement('element name')=> this will create a new element 
+
+removing html elements thorugh DOM:
+
+1.remove()=>this will remove the html element that we have used it with
+2.removeChild(child element)=>this will remove the specified child element from its parent
+
+adding html elements inside another html element(parent element):
+
+1.append(html element/string)=> append accepts both elements and string value,it will insert the specified value inside the element at last
+and it can add multiple values at a time, ex= append(arg1,arg2,arg3.....argn)
+2.appendChild(element)=> this will accept only html elements not string value, it will insert the specified value inside the element at last 
+and it can add only one element at a time
+
+contents of html element:
+
+1.innerHTML => all the content including tags and texts
+2.innerText=> only text content and shows text how it is visible in our webpage
+3.textContent=> only text content but shows hidden texts too, it will show the text content just how it is visible in our html document
+
+manipulating attributes of html element through DOM:
+
+1.setAttribute('attribute name','attribute value')
+2.getAttribute('attribute name')=> it will return the attribute value
+3.removeAttribute('attribute name')=> removes the specified attribute from the element
+
+manipulating class of html element through DOM:
+
+1.classList.add('class name')
+2.classList.remove('class name')=>removes the specified class name from the class attribute of html element
+3.classList.contains('class name')=> checks whether the specified class name is present in the element's class attribute and return boolean value
+
+accessing html elements based on its relationship with other html elements:
+
+1.parentElement=> return parent element
+ * if we want grand parent then just use it twice i,e parentElement.parentElement
+
+ 2.children=> returns array of child elements
+ 3.firstElementChild
+ 4.lastElementChild
+ 5.previousElementSibling
+ 6.nextElementSibling
